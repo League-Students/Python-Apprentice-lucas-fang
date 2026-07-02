@@ -15,7 +15,7 @@ turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 tina.hideturtle()
 he = 180
-1``
+rad = 60
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
@@ -24,11 +24,11 @@ he = 180
 window = turtle.Screen()
 window.bgcolor('black')
 for i in range(0, 0 ):
-  tina.circle(70, steps= 3)
+  tina.circle( rad , steps= 3)
   tina.left(120)
-  tina.circle(-70, steps = 3)
+  tina.circle(- rad , steps = 3)
   tina.left(120)
-  tina.circle(70, steps = 3)
+  tina.circle(rad, steps = 3)
   tina.left(1)
   i = i + 1
   print(i)
