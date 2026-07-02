@@ -14,7 +14,7 @@ import turtle                           # Tell Python we want to work with the t
 turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 #tina.hideturtle()
-tina.speed(1)
+tina.speed('fastest')
 he = 120
 rad = 100
 angle = 0.5
