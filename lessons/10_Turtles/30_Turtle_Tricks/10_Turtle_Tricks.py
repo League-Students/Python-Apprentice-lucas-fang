@@ -126,9 +126,9 @@ radius = 50
 tina.color("black", "lightblue")  # Outline and Fill colors
 tina.begin_fill()
 
-#tina.backward(radius)  # Shift to place center at origin
+tina.backward(radius)  # Shift to place center at origin
 tina.circle(radius)    # Draw circle
-#tina.forward(radius)   # Return to the starting center point
+tina.forward(radius)   # Return to the starting center point
 
 tina.end_fill()
 
