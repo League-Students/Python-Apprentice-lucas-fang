@@ -28,14 +28,6 @@ angle1 = random.uniform(0, 360)
 window = turtle.Screen()
 window.bgcolor('black')
 
-  tina.circle( rad , steps= 3)
-  tina.left( angle1 )
-  tina.circle(- rad , steps = 3)
-  tina.left( angle1 )
-  tina.circle(rad, steps = 3)
-  tina.right( angle )
-  i = i + 1
-  print(i)
 
 n = 0 
 tina.color('white')
@@ -121,9 +113,15 @@ for n in range(0, he ):
     n = n + 1
     print(n)
 
-for i in range(0, 0 ):
-
-
-tina.end_fill()
+tina.color('black')
+for i in range(0, 180 ):
+  tina.circle( rad , steps= 3)
+  tina.left( angle1 )
+  tina.circle(- rad , steps = 3)
+  tina.left( angle1 )
+  tina.circle(rad, steps = 3)
+  tina.right( angle )
+  i = i + 1
+  print(i)
 
 turtle.exitonclick()                    # Close the window when we click on it
