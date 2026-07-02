@@ -15,7 +15,7 @@ turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 tina.hideturtle()
 tina.speed('fastest')
-he = 180
+he = 120
 rad = 300
 angle = 0.5
 # Use tina.forward() and tina.left() to draw a triangle
