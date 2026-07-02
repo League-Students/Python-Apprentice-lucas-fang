@@ -18,6 +18,7 @@ tina.speed(1)
 he = 120
 rad = 100
 angle = 0.5
+angle1 = 
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
@@ -79,7 +80,7 @@ for n in range(0, he ):
     tina.circle(- rad , steps = 3)
     tina.left(120)
     tina.circle( rad , steps = 3)
-    tina.left( angle )
+    tina.right( angle )
     n = n + 1
     print(n)
     
@@ -91,7 +92,7 @@ for n in range(0, he ):
     tina.circle(- rad , steps = 3)
     tina.left(120)
     tina.circle( rad , steps = 3)
-    tina.left( angle )
+    tina.right( angle )
     n = n + 1
     print(n)
     
@@ -103,7 +104,7 @@ for n in range(0, he ):
     tina.circle(- rad , steps = 3)
     tina.left(120)
     tina.circle( rad , steps = 3)
-    tina.left( angle )
+    tina.right( angle )
     n = n + 1
     print(n)
     
@@ -115,7 +116,7 @@ for n in range(0, he ):
     tina.circle(- rad , steps = 3)
     tina.left(120)
     tina.circle( rad , steps = 3)
-    tina.left( angle )
+    tina.right( angle )
     n = n + 1
     print(n)
     
