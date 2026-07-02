@@ -15,7 +15,7 @@ turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 #tina.hideturtle()
 tina.speed('fastest')
-he = 30
+he = 60
 rad = 100
 angle = 2
 angle1 = 90
