@@ -16,7 +16,7 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 tina.hideturtle()
 tina.speed('fastest')
 he = 180
-rad = 100
+rad = 300
 angle = 0.5
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
