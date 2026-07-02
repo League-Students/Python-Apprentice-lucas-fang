@@ -16,7 +16,7 @@ turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 tina.hideturtle()
 tina.speed('fastest')
-he = 60
+he = 10
 rad = 100
 angle = 2
 angle1 = random.uniform(0, 360)
@@ -121,8 +121,8 @@ for n in range(0, he ):
     n = n + 1
     print(n)
     
-tina.color('black')
 tina.goto(25 , 25)
-tina.circle(50 , steps = 999999999999999999999999999999999999)
+tina.color('black')
+tina.circle(50)
 
 turtle.exitonclick()                    # Close the window when we click on it
