@@ -120,7 +120,7 @@ for n in range(0, he ):
     tina.right( angle )
     n = n + 1
     print(n)
-    
+tina.speed(1)  
 radius = 50
 
 tina.color("black", "lightblue")  # Outline and Fill colors
