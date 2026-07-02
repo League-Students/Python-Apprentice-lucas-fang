@@ -124,4 +124,5 @@ for i in range(0, 180 ):
   i = i + 1
   print(i)
 
+print("Happy marriage w/ alex!!")
 turtle.exitonclick()                    # Close the window when we click on it
