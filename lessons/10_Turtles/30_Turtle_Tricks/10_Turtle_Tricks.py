@@ -18,7 +18,7 @@ tina.speed('fastest')
 he = 60
 rad = 100
 angle = 2
-angle1 = 360
+angle1 = 38
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
