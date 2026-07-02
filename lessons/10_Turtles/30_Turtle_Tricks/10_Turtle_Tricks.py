@@ -27,7 +27,7 @@ angle1 = random.uniform(0, 360)
 ... # Your code here
 window = turtle.Screen()
 window.bgcolor('black')
-for i in range(0, 0 ):
+
   tina.circle( rad , steps= 3)
   tina.left( angle1 )
   tina.circle(- rad , steps = 3)
@@ -120,18 +120,9 @@ for n in range(0, he ):
     tina.right( angle )
     n = n + 1
     print(n)
-tina.speed(1)  
-radius = 50
 
-tina.color("black", "lightblue")  # Outline and Fill colors
-tina.begin_fill()
+for i in range(0, 0 ):
 
-tina.setheading(0)
-tina.forward(radius)
-tina.right(90)
-tina.forward(radius)  # Shift to place center at origin
-tina.circle(radius)    # Draw circle
-tina.forward(radius)   # Return to the starting center point
 
 tina.end_fill()
 
