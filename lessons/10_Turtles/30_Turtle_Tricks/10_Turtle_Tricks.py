@@ -31,7 +31,7 @@ for i in range(0, 0 ):
   tina.circle(- rad , steps = 3)
   tina.left(120)
   tina.circle(rad, steps = 3)
-  tina.left( angle )
+  tina.right( angle )
   i = i + 1
   print(i)
 
@@ -43,7 +43,7 @@ for n in range(0, he ):
     tina.circle(- rad , steps = 3)
     tina.left(120)
     tina.circle( rad , steps = 3)
-    tina.left( angle )
+    tina.right( angle )
     n = n + 1
     print(n)
     
@@ -55,7 +55,7 @@ for n in range(0, he ):
     tina.circle(- rad , steps = 3)
     tina.left(120)
     tina.circle( rad , steps = 3)
-    tina.left( angle )
+    tina.right( angle )
     n = n + 1
     print(n)
     
@@ -67,7 +67,7 @@ for n in range(0, he ):
     tina.circle(- rad , steps = 3)
     tina.left(120)
     tina.circle( rad , steps = 3)
-    tina.left( angle )
+    tina.right( angle )
     n = n + 1
     print(n)
     
