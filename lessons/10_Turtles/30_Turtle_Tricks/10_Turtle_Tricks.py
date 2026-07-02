@@ -36,11 +36,11 @@ for i in range(0, 0 ):
 n = 0 
 tina.color('white')
 for n in range(0, he ):
-    tina.circle(70, steps= 3)
+    tina.circle( rad , steps= 3)
     tina.left(120)
-    tina.circle(-70, steps = 3)
+    tina.circle(- rad , steps = 3)
     tina.left(120)
-    tina.circle(70, steps = 3)
+    tina.circle( rad , steps = 3)
     tina.left(1)
     n = n + 1
     print(n)
@@ -48,11 +48,11 @@ for n in range(0, he ):
 n = 0 
 tina.color('red')
 for n in range(0, he ):
-    tina.circle(70, steps= 3)
+    tina.circle( rad , steps= 3)
     tina.left(120)
-    tina.circle(-70, steps = 3)
+    tina.circle(- rad , steps = 3)
     tina.left(120)
-    tina.circle(70, steps = 3)
+    tina.circle( rad , steps = 3)
     tina.left(1)
     n = n + 1
     print(n)
@@ -60,11 +60,11 @@ for n in range(0, he ):
 n = 0 
 tina.color('orange')
 for n in range(0, he ):
-    tina.circle(70, steps= 3)
+    tina.circle( rad , steps= 3)
     tina.left(120)
-    tina.circle(-70, steps = 3)
+    tina.circle(- rad , steps = 3)
     tina.left(120)
-    tina.circle(70, steps = 3)
+    tina.circle( rad , steps = 3)
     tina.left(1)
     n = n + 1
     print(n)
@@ -72,11 +72,11 @@ for n in range(0, he ):
 n = 0 
 tina.color('yellow')
 for n in range(0, he ):
-    tina.circle(70, steps= 3)
+    tina.circle( rad , steps= 3)
     tina.left(120)
-    tina.circle(-70, steps = 3)
+    tina.circle(- rad , steps = 3)
     tina.left(120)
-    tina.circle(70, steps = 3)
+    tina.circle( rad , steps = 3)
     tina.left(1)
     n = n + 1
     print(n)
@@ -84,11 +84,11 @@ for n in range(0, he ):
 n = 0 
 tina.color('green')
 for n in range(0, he ):
-    tina.circle(70, steps= 3)
+    tina.circle( rad , steps= 3)
     tina.left(120)
-    tina.circle(-70, steps = 3)
+    tina.circle(- rad , steps = 3)
     tina.left(120)
-    tina.circle(70, steps = 3)
+    tina.circle( rad , steps = 3)
     tina.left(1)
     n = n + 1
     print(n)
@@ -96,11 +96,11 @@ for n in range(0, he ):
 n = 0 
 tina.color('blue')
 for n in range(0, he ):
-    tina.circle(70, steps= 3)
+    tina.circle( rad , steps= 3)
     tina.left(120)
-    tina.circle(-70, steps = 3)
+    tina.circle(- rad , steps = 3)
     tina.left(120)
-    tina.circle(70, steps = 3)
+    tina.circle( rad , steps = 3)
     tina.left(1)
     n = n + 1
     print(n)
@@ -108,11 +108,11 @@ for n in range(0, he ):
 n = 0 
 tina.color('purple')
 for n in range(0, he ):
-    tina.circle(70, steps= 3)
+    tina.circle( rad , steps= 3)
     tina.left(120)
-    tina.circle(-70, steps = 3)
+    tina.circle(- rad , steps = 3)
     tina.left(120)
-    tina.circle(70, steps = 3)
+    tina.circle( rad , steps = 3)
     tina.left(1)
     n = n + 1
     print(n)
