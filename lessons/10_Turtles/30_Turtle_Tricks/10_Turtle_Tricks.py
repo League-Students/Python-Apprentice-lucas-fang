@@ -121,7 +121,7 @@ for n in range(0, he ):
     n = n + 1
     print(n)
     
-tina.goto(0 , 0)
+tina.goto(0 , 12.5)
 tina.color('black')
 tina.circle(50)
 
