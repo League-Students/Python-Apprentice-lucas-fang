@@ -122,6 +122,6 @@ for n in range(0, he ):
     print(n)
     
 tina.color('black')
-tina.circle
+tina.circle(50)
 
 turtle.exitonclick()                    # Close the window when we click on it
