@@ -14,13 +14,13 @@ import turtle                           # Tell Python we want to work with the t
 turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 tina.hideturtle()
-
+he = 180
+1``
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
 
 ... # Your code here
-he = 180
 window = turtle.Screen()
 window.bgcolor('black')
 for i in range(0, 0 ):
