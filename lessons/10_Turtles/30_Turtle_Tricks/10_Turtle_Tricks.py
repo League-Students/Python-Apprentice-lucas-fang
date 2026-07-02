@@ -11,7 +11,7 @@ Refer to previous turtle programs for examples of how to use these commands.
 
 # These lines are needed in most turtle programs
 import turtle                           # Tell Python we want to work with the turtle
-import
+import random
 turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 tina.hideturtle()
@@ -19,7 +19,7 @@ tina.speed('fastest')
 he = 60
 rad = 100
 angle = 2
-angle1 = 38
+angle1 = random.uniform(0, 360)
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
