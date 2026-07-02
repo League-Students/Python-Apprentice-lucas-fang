@@ -121,8 +121,15 @@ for n in range(0, he ):
     n = n + 1
     print(n)
     
-tina.goto(0 , 12.5)
-tina.color('black')
-tina.circle(50)
+radius = 50
+
+tina.color("black", "lightblue")  # Outline and Fill colors
+tina.begin_fill()
+
+tina.backward(radius)  # Shift to place center at origin
+tina.circle(radius)    # Draw circle
+tina.forward(radius)   # Return to the starting center point
+
+tina.end_fill()
 
 turtle.exitonclick()                    # Close the window when we click on it
