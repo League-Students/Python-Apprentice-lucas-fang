@@ -18,7 +18,7 @@ tina.speed(1)
 he = 120
 rad = 100
 angle = 0.5
-angle1 = 
+angle1 = 60
 # Use tina.forward() and tina.left() to draw a triangle
 # Make each side of the triangle a different color with 
 # tina.pencolor()
@@ -28,9 +28,9 @@ window = turtle.Screen()
 window.bgcolor('black')
 for i in range(0, 0 ):
   tina.circle( rad , steps= 3)
-  tina.left(120)
+  tina.left( angle1 )
   tina.circle(- rad , steps = 3)
-  tina.left(120)
+  tina.left( angle1 )
   tina.circle(rad, steps = 3)
   tina.right( angle )
   i = i + 1
@@ -40,9 +40,9 @@ n = 0
 tina.color('white')
 for n in range(0, he ):
     tina.circle( rad , steps= 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle(- rad , steps = 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle( rad , steps = 3)
     tina.right( angle )
     n = n + 1
@@ -52,9 +52,9 @@ n = 0
 tina.color('red')
 for n in range(0, he ):
     tina.circle( rad , steps= 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle(- rad , steps = 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle( rad , steps = 3)
     tina.right( angle )
     n = n + 1
@@ -64,9 +64,9 @@ n = 0
 tina.color('orange')
 for n in range(0, he ):
     tina.circle( rad , steps= 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle(- rad , steps = 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle( rad , steps = 3)
     tina.right( angle )
     n = n + 1
@@ -76,9 +76,9 @@ n = 0
 tina.color('yellow')
 for n in range(0, he ):
     tina.circle( rad , steps= 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle(- rad , steps = 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle( rad , steps = 3)
     tina.right( angle )
     n = n + 1
@@ -88,9 +88,9 @@ n = 0
 tina.color('green')
 for n in range(0, he ):
     tina.circle( rad , steps= 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle(- rad , steps = 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle( rad , steps = 3)
     tina.right( angle )
     n = n + 1
@@ -100,9 +100,9 @@ n = 0
 tina.color('blue')
 for n in range(0, he ):
     tina.circle( rad , steps= 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle(- rad , steps = 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle( rad , steps = 3)
     tina.right( angle )
     n = n + 1
@@ -112,9 +112,9 @@ n = 0
 tina.color('purple')
 for n in range(0, he ):
     tina.circle( rad , steps= 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle(- rad , steps = 3)
-    tina.left(120)
+    tina.left( angle1 )
     tina.circle( rad , steps = 3)
     tina.right( angle )
     n = n + 1
