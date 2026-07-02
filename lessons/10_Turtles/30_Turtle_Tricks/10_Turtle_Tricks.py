@@ -11,6 +11,7 @@ Refer to previous turtle programs for examples of how to use these commands.
 
 # These lines are needed in most turtle programs
 import turtle                           # Tell Python we want to work with the turtle
+import
 turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 tina.hideturtle()
