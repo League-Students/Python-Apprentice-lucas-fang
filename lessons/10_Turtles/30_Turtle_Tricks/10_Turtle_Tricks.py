@@ -125,5 +125,5 @@ for i in range(0, 180 ):
   print(i)
 
 tina.color('white')
-tina.write()
+tina.write("Happy marriage w/ alex!!")
 turtle.exitonclick()                    # Close the window when we click on it
