@@ -5,7 +5,7 @@ from the section "Set a Background Picture"
 Then change the code so that the turtle uses a different background image
 (look in the 'images' directory) and draws a shape on top of it with your turtle.
 """
-```python
+
 # Double-click to copy!
 
 import turtle
@@ -31,4 +31,4 @@ screen = turtle.Screen()                    # Get the screen that tina is on
 set_background_image(screen, "emoji.png")   # Set the background image of the screen
 
 turtle.exitonclick() 
-```
+
