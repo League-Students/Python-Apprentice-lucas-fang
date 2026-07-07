@@ -20,5 +20,6 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 
 ... # Your code here
 digits = 1000
-pi = (-1 )
+pi = (-1 ** digits)/(2 * digits + 1 )
+print(pi)
 turtle.exitonclick()                    # Close the window when we click on it
