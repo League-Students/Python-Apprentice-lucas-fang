@@ -15,7 +15,7 @@ name: Loop With Turtle
 
 ... # Your code here
 import turtle #Creates the turtle
-turtle.setup(600 , 600 , 0 , 0)
+turtle.setup(600 , 600 , 0 , 0) 
 tina = turtle.Turtle()
 for side in range(1 , 6):
     tina.forward(100)
