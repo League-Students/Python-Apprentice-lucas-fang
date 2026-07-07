@@ -17,6 +17,6 @@ name: Loop With Turtle
 import turtle #Tells Python we want turtle
 turtle.setup(600 , 600 , 0 , 0) #Creates the drawing area
 tina = turtle.Turtle() #Creates a turtle named tina
-for side in range(1 , 6): #L
-    tina.forward(100)
-    tina.left(72)
+for side in range(1 , 6): #Loop to make all 5 sides
+    tina.forward(100) #make the side
+    tina.left(72) #turn so the next side is in the correct angle
