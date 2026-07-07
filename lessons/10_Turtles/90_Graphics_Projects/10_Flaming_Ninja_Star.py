@@ -32,7 +32,7 @@ flame_size = 130  # the length of the flaming arms
 t = turtle.Turtle()
 t.shape("turtle")
 t.width(2)
-t.speed(0)
+t.speed('fastest')
 
 for i in range(25):
     t.pencolor(get_random_color())
