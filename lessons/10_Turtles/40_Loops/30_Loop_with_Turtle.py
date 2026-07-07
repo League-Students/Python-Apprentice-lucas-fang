@@ -17,3 +17,6 @@ name: Loop With Turtle
 import turtle
 turtle.setup(600 , 600 , 0 , 0)
 tina = turtle.Turtle()
+for side in range(1 , 5):
+    tina.forward(100)
+    tina.left
