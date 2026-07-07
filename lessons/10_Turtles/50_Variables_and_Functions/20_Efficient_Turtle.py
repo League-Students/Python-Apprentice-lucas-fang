@@ -31,7 +31,8 @@ tina.right(45)                                      # Move tina to another spot 
 
 draw_polygon(5)                        # Draw a pentagon
 
-...                                      # Move tina to another spot on the screen
+tina.forward(100)
+tina.right(45)                                        # Move tina to another spot on the screen
 
 draw_polygon(6)                        # Draw a hexagon
 
