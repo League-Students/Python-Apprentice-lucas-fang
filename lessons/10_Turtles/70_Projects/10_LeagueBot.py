@@ -31,3 +31,4 @@ def set_turtle_image(turtle, image_name):
 
 setr_turtle_image(t, leaguebot_bot.gif)
 t.turtlesize(10,10)
+t.forward 1000
