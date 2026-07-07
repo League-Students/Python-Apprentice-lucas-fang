@@ -14,3 +14,5 @@ name: Loop With Turtle
 """
 
 ... # Your code here
+import turtle
+tina = turtle.Turtle()
