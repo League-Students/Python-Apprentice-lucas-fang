@@ -28,6 +28,6 @@ def make_a_shape(t):
 
 num_shapes = 5
 
-for i in range(5):
+for i in range(999999999999999999999999999):
     make_a_shape(t)
     t.right(360/num_shapes)
