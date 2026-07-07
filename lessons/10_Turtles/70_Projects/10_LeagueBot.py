@@ -30,3 +30,4 @@ def set_turtle_image(turtle, image_name):
     turtle.shape(image_path)                        # Set the turtle's shape to the image
 
 setr_turtle_image(t, leaguebot_bot.gif)
+t.turtlesize(10,10)
