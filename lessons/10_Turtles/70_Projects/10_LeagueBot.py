@@ -16,7 +16,7 @@ screen.setup(width=600, height=600)
 screen.bgcolor('white')
 
 t = turtle.Turtle()
-
+t.speed(2)
 ... # Your Code Here
 def set_turtle_image(turtle, image_name):
     """Set the turtle's shape to a custom image."""
@@ -29,6 +29,6 @@ def set_turtle_image(turtle, image_name):
     screen.addshape(image_path)                     # Register the image as a shape
     turtle.shape(image_path)                        # Set the turtle's shape to the image
 
-setr_turtle_image(t, leaguebot_bot.gif)
+set_turtle_image(t, leaguebot_bot.gif)
 t.turtlesize(10,10)
-t.forward 1000
+t.forward(1000)
