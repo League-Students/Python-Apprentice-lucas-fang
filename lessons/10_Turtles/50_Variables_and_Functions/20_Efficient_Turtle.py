@@ -24,9 +24,10 @@ def draw_polygon(sides):
         tina.forward(100)                              # Move tina forward by the forward distance
         tina.right(angle)                              # Turn tina left by the left turn
 
-draw_polygon4                        # Draw a square
+draw_polygon(4)                        # Draw a square
 
-...                                      # Move tina to another spot on the screen
+tina.forward(100)
+tina.right(45)                                      # Move tina to another spot on the screen
 
 draw_polygon(5)                        # Draw a pentagon
 
