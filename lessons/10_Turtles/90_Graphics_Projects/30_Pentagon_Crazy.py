@@ -28,8 +28,7 @@ my_turtle.speed(0)
 my_turtle.width(1)
 
 sides = 8
-angle = (180 * (sides - 2)) / (sides)
-
+angle = 135
 for i in range(360000):
     if i == 100:
         my_turtle.width(2)
