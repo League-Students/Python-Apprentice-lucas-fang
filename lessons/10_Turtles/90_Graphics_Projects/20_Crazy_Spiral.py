@@ -18,7 +18,7 @@ t.speed('fastest')
 
 def make_a_shape(t):
     """Make a shape with turtle t. Make it go left or right or forward"""    
-    t.forward(0.1)
+    t.forward(1)
     t.left(1)
 
 # 2) Call make_a_shape() in a loop to make the turtle draw a spiral.
