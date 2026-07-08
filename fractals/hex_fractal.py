@@ -19,6 +19,10 @@ def fractal_square(size, depth):
             tina.forward(size / 6)            
             fractal_square(size / 6, depth - 1)
             tina.forward(size * 2 / 6)
+            fractal_square(size / 6, depth - 1)
+            tina.forward(size / 6)            
+            fractal_square(size / 6, depth - 1)
+            tina.forward(size * 2 / 6)
             #tina.left(60)
 
 #move tina to a good spot
