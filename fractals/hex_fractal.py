@@ -23,7 +23,7 @@ def fractal_square(size, depth):
 #    else: #recursive case
 #move tina to a good spot
 tina.penup()
-tina.goto(-250 , -250)
+tina.goto(0 , 0)
 tina.pendown()
 fractal_square(200, 0)
 turtle.exitonclick()
