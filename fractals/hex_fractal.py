@@ -15,7 +15,8 @@ def fractal_square(size, depth):
         tina.end_fill()
     else: #recursive case
         for i in range(6):
-            tina.forward()
+            tina.forward(size)
+            tiona.le
 #move tina to a good spot
 tina.penup()
 tina.goto(-250 , -250)
