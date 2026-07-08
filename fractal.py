@@ -19,7 +19,7 @@ def fractal_triangle(size, depth):
 
 #move tina to a good spot
 tina.penup()
-tina.goto(-200 , -300)
+tina.goto(-250 , -250)
 tina.pendown()
-fractal_triangle(200, 2)
+fractal_triangle(200, 5)
 turtle.exitonclick()
