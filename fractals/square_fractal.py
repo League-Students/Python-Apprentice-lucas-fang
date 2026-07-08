@@ -14,7 +14,9 @@ def fractal_triangle(size, depth):
     else: #recursive case
         for i in range(4):
             fractal_triangle(size / 3, depth - 1)
-            tina.forward(size / 3)
+            tina.forward(size / 3)            
+            fractal_triangle(size / 3, depth - 1)
+            tina.forward(size * 2 / 3)
             tina.left(90)
 
 #move tina to a good spot
