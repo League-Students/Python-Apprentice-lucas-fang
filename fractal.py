@@ -3,3 +3,7 @@ import turtle
 tina = turtle.Turtle()
 screen = turtle.screen
 screen.setup(600 , 600)
+
+
+
+turtle.exitonclick()
