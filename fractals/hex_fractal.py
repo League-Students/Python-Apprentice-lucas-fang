@@ -10,8 +10,9 @@ def fractal_square(size, depth):
     if depth == 0: # base case
         tina.begin_fill()
         for i in range(6):
+            tina.left(30)
             tina.forward(size)
-            tina.left(60)
+            tina.right(120)
         tina.end_fill()
     else: #recursive case
         for i in range(6):
