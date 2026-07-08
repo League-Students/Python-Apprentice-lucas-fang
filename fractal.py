@@ -14,6 +14,7 @@ def fractal_triangle(size, depth):
         for i in range(3):
             fractal_triangle(size / 2, depth - 1)
             tina.forward(size)
+            tina.left(120)
 
 fractal_triangle(200, 1)
 turtle.exitonclick()
