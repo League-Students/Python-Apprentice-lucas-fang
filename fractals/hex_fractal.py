@@ -25,5 +25,5 @@ def fractal_square(size, depth):
 tina.penup()
 tina.goto(-250 , -250)
 tina.pendown()
-fractal_square(20, 1)
+fractal_square(200, 2)
 turtle.exitonclick()
