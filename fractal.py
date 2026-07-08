@@ -12,7 +12,7 @@ def fractal_triangle(size, depth):
             tina.left(120)
     else: #recursive case
         for i in range(3):
-            fractal_triangle(size/2, depth - 1)
+            fractal_triangle(size / 2, depth - 1)
             tina.forward(size)
 
 fractal_triangle(200, 1)
