@@ -5,7 +5,7 @@ screen = turtle.Screen()
 screen.setup(600,600)
 tina.hideturtle()
 tina.speed('fastest')
-# Tell python to work with turtles, make tina,  
+# Tell python to work with turtles, make tina, set screen size, hide tina, set tinas speed 
 def fractal_triangle(size, depth):
     if depth == 0: # base case
         for i in range(3):
