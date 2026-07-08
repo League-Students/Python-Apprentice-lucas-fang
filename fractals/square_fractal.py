@@ -17,7 +17,7 @@ def fractal_triangle(size, depth):
             tina.forward(size / 3)            
             fractal_triangle(size / 3, depth - 1)
             tina.forward(size * 2 / 3)
-            tina.left(90)
+            tina.right(90)
 
 #move tina to a good spot
 tina.penup()
