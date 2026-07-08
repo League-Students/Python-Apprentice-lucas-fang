@@ -35,9 +35,9 @@ for i in range(360000):
     if i == 200:
         my_turtle.width(3)
     my_turtle.pencolor(get_next_color(i))
-    my_turtle.forward(  i**(1/2))
+    my_turtle.forward(  i**(1/3))
     my_turtle.right(angle + 1)
-    print(i ** (1/2))
+    print(i ** (1/3))
 
     
 
