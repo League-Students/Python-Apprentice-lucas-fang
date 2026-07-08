@@ -2,4 +2,4 @@ import turtle
 
 tina = turtle.Turtle()
 screen = turtle.screen
-scre
+screen.setup(600 , 600)
