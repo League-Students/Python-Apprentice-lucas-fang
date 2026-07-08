@@ -3,7 +3,7 @@ import turtle
 tina = turtle.Turtle()
 screen = turtle.Screen()
 screen.setup(600,600)
-tina.hideturtle()
+#tina.hideturtle()
 
 def fractal_triangle(size, depth):
     if depth == 0: # base case
