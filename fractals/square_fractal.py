@@ -12,14 +12,14 @@ def fractal_triangle(size, depth):
             tina.forward(size)
             tina.left(90)
     else: #recursive case
-        for i in range(3):
+        for i in range(4):
             fractal_triangle(size / 2, depth - 1)
             tina.forward(size)
-            tina.left(100)
+            tina.left(90)
 
 #move tina to a good spot
 tina.penup()
 tina.goto(-250 , -250)
 tina.pendown()
-fractal_triangle(500, 1)
+fractal_triangle(400, 4)
 turtle.exitonclick()
