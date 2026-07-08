@@ -9,7 +9,8 @@ def fractal_triangle(size, depth):
         for i in range(3):
             tina.forward(size)
             tina.left(120)
-else: 
+else: #recursive case
+    for i in range()
 
 fractal_triangle(200, 0)
 turtle.exitonclick()
