@@ -11,19 +11,19 @@ def fractal_square(size, depth):
         tina.begin_fill()
         for i in range(6):
             tina.forward(size)
-            tina.left(90)
+            tina.left(60)
         tina.end_fill()
     else: #recursive case
         for i in range(6):
-            fractal_square(size / 3, depth - 1)
-            tina.forward(size / 3)            
-            fractal_square(size / 3, depth - 1)
-            tina.forward(size * 2 / 3)
+            fractal_square(size / 5, depth - 1)
+            tina.forward(size / 5)            
+            fractal_square(size / 5, depth - 1)
+            tina.forward(size * 2 / 5)
             tina.left(90)
 
 #move tina to a good spot
 tina.penup()
 tina.goto(-250 , -250)
 tina.pendown()
-fractal_square(400, 4)
+fractal_square(20, 0)
 turtle.exitonclick()
