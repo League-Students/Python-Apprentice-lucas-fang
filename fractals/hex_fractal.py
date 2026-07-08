@@ -20,7 +20,7 @@ def fractal_square(size, depth):
             tina.right(120)
         tina.right(60)
         tina.forward(size)
-        tina.
+        tina.left(150)
 #move tina to a good spot
 tina.penup()
 tina.goto(-250 , -250)
