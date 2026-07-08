@@ -17,6 +17,7 @@ def fractal_square(size, depth):
         for i in range(6):
             fractal_square(size / 6, depth - 1)
             tina.forward(size / 6)            
+            tina.left(60)
             fractal_square(size / 6, depth - 1)
             tina.forward(size * 2 / 6)
             tina.left(60)
@@ -25,5 +26,5 @@ def fractal_square(size, depth):
 tina.penup()
 tina.goto(-250 , -250)
 tina.pendown()
-fractal_square(200, 2)
+fractal_square(400, 5)
 turtle.exitonclick()
