@@ -19,11 +19,11 @@ def fractal_square(size, depth):
             tina.forward(size / 5)            
             fractal_square(size / 5, depth - 1)
             tina.forward(size * 2 / 5)
-            tina.left(90)
+            tina.left(60)
 
 #move tina to a good spot
 tina.penup()
 tina.goto(-250 , -250)
 tina.pendown()
-fractal_square(20, 0)
+fractal_square(20, 1)
 turtle.exitonclick()
