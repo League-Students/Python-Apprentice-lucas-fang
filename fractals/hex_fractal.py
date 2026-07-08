@@ -17,7 +17,6 @@ def fractal_square(size, depth):
         for i in range(6):
             fractal_square(size / 6, depth - 1)
             tina.forward(size / 6)            
-            tina.left(60)
             fractal_square(size / 6, depth - 1)
             tina.forward(size * 2 / 6)
             tina.left(60)
