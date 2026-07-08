@@ -5,7 +5,7 @@ screen = turtle.Screen()
 screen.setup(600,600)
 tina.hideturtle()
 tina.speed('fastest')
-
+# Make 
 def fractal_triangle(size, depth):
     if depth == 0: # base case
         for i in range(3):
@@ -21,5 +21,5 @@ def fractal_triangle(size, depth):
 tina.penup()
 tina.goto(-250 , -250)
 tina.pendown()
-fractal_triangle(500, 7.5)
+fractal_triangle(500, 7)
 turtle.exitonclick()
