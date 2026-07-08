@@ -13,5 +13,6 @@ def fractal_triangle(size, depth):
         for i in range(3):
             fractal_triangle(size/2, depth)
 
-fractal_triangle(200, 0)
+
+fractal_triangle(200, 1)
 turtle.exitonclick()
