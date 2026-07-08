@@ -8,11 +8,11 @@ tina.speed('fastest')
 # Tell python to work with turtles, make tina, set screen size, hide tina, set tinas speed. 
 def fractal_triangle(size, depth):
     if depth == 0: # base case
-        tina.beginfill()
+        tina.begin_fill()
         for i in range(4):
             tina.forward(size)
             tina.left(90)
-        tina.endfill()
+        tina.end_fill()
     else: #recursive case
         for i in range(4):
             fractal_triangle(size / 3, depth - 1)
