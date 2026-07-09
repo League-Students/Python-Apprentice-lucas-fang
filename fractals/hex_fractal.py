@@ -5,24 +5,35 @@ screen = turtle.Screen()
 screen.setup(600, 600)
 tina.hideturtle()
 
-# Set up live drawing animations
+# Keep it drawing line-by-line visually
 screen.tracer(1)
 tina.speed('fastest')
 
-def hexaflake_precise(size, depth):
+# Exact matching vibrant green color
+HEX_GREEN = "#5CFF42"
+
+def hexaflake_clean(size, depth):
     if depth == 0:
-        # Base case: draw one of the small, solid green hexagons
+        # Base case: draw a solid green hexagon with NO black outline lines
+        tina.color(HEX_GREEN, HEX_GREEN)  
         tina.begin_fill()
         for _ in range(6):
             tina.forward(size)
             tina.left(60)
         tina.end_fill()
-    else:
-        # Recursive case: position 6 smaller flakes in a ring matching the image
+        
+        # Optional: Add a black edge only to the outer border of this hexagon
+        tina.color("black", HEX_GREEN)
         for _ in range(6):
-            hexaflake_precise(size / 3, depth - 1)
+            tina.forward(size)
+            tina.left(60)
+    else:
+        # Recursive case
+        for _ in range(6):
+            hexaflake_clean(size / 3, depth - 1)
             
-            # Move along the geometric outline to the next cluster node
+            # Move along the geometric outline with pen hidden to avoid stray cross-lines
+            tina.color(HEX_GREEN) 
             tina.forward(size * 2 / 3)
             tina.left(60)
 
@@ -30,12 +41,10 @@ def hexaflake_precise(size, depth):
 tina.penup()
 tina.goto(-100, -150) 
 tina.pendown()
-
-# Set pen thickness and matching bright green color
 tina.pensize(2)
-tina.color("black", "#5CFF42")
 
-# Draw the exact depth 2 pattern line-by-line
-hexaflake_precise(300, 2)
+# Draw the clean depth 2 pattern line-by-line
+hexaflake_clean(300, 2)
 
 turtle.exitonclick()
+
