@@ -5,33 +5,37 @@ screen = turtle.Screen()
 screen.setup(600, 600)
 tina.hideturtle()
 
-# 1. RE-ENABLE ANIMATION: Tell the screen to update on every single movement
+# Set up live drawing animations
 screen.tracer(1)
 tina.speed('fastest')
 
-def hexaflake(size, depth):
-    if depth == 0: # base case: draws the hexagon lines
+def hexaflake_precise(size, depth):
+    if depth == 0:
+        # Base case: draw one of the small, solid green hexagons
         tina.begin_fill()
-        for i in range(6):
+        for _ in range(6):
             tina.forward(size)
             tina.left(60)
         tina.end_fill()
-    else: # recursive case
-        for i in range(6):
-            hexaflake(size / 3, depth - 1)
-            tina.forward(size / 3)            
-            hexaflake(size / 3, depth - 1)
+    else:
+        # Recursive case: position 6 smaller flakes in a ring matching the image
+        for _ in range(6):
+            hexaflake_precise(size / 3, depth - 1)
+            
+            # Move along the geometric outline to the next cluster node
             tina.forward(size * 2 / 3)
             tina.left(60)
 
-# Move tina to a good starting spot to center the flake
+# Center the drawing on screen
 tina.penup()
-tina.goto(-100, -200) 
+tina.goto(-100, -150) 
 tina.pendown()
 
-tina.color("black", "royalblue")
+# Set pen thickness and matching bright green color
+tina.pensize(2)
+tina.color("black", "#5CFF42")
 
-# 2. LOWER DEPTH: Set to depth 2 so you can watch it draw without waiting forever
-hexaflake(350, 2)
+# Draw the exact depth 2 pattern line-by-line
+hexaflake_precise(300, 2)
 
 turtle.exitonclick()
