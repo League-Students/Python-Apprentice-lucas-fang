@@ -5,12 +5,12 @@ screen = turtle.Screen()
 screen.setup(600, 600)
 tina.hideturtle()
 
-# Animate line-by-line visually
+# Live line-by-line drawing
 screen.tracer(1)
 tina.speed('fastest')
 
-def draw_single_small_hexagon(size):
-    """Draws exactly one standalone small hexagon unit."""
+def draw_clean_hexagon(size):
+    """Draws one single, solid green hexagon with a clean black outline."""
     tina.color("black", "#5CFF42")
     tina.begin_fill()
     for _ in range(6):
@@ -18,28 +18,29 @@ def draw_single_small_hexagon(size):
         tina.left(60)
     tina.end_fill()
 
-def hexaflake_small_units(size, depth):
-    # When depth reaches 0, we draw a single independent small hexagon
+def hexaflake(size, depth):
     if depth == 0:
-        draw_single_small_hexagon(size)
+        # Base case: Just draw ONE solid hexagon unit
+        draw_clean_hexagon(size)
     else:
-        # Move through the fractal tree to position the small units
+        # Recursive case
         for _ in range(6):
-            hexaflake_small_units(size / 3, depth - 1)
+            hexaflake(size / 3, depth - 1)
             
-            # Step to the next cluster node without dragging internal lines
+            # FIX: Lift the pen completely before moving to the next spot!
+            # This prevents the turtle from slicing through the hexagon with black lines.
             tina.penup()
             tina.forward(size * 2 / 3)
             tina.left(60)
-            tina.pendown()
+            tina.pendown() # Put it down only when ready to draw the next unit
 
-# Center the setup nicely on the canvas
+# Center the drawing on the canvas
 tina.penup()
-tina.goto(-80, -150) 
+tina.goto(-100, -150) 
 tina.pendown()
 tina.pensize(2)
 
-# depth=2 creates exactly the 36 individual small hexagons seen in your image
-hexaflake_small_units(260, 2)
+# depth=1 gives exactly 6 clean hexagons in a ring with a hollow star center!
+hexaflake(300, 1)
 
 turtle.exitonclick()
