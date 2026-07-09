@@ -4,19 +4,19 @@ tina = turtle.Turtle()
 screen = turtle.Screen()
 screen.setup(600, 600)
 tina.hideturtle()
+
+# 1. RE-ENABLE ANIMATION: Tell the screen to update on every single movement
+screen.tracer(1)
 tina.speed('fastest')
 
-# CRITICAL OPTIMIZATION: Turns off instant animation so depth 4 doesn't freeze your PC.
-screen.tracer(0, 0)
-
 def hexaflake(size, depth):
-    if depth == 0: # base case: draw a filled hexagon
+    if depth == 0: # base case: draws the hexagon lines
         tina.begin_fill()
         for i in range(6):
             tina.forward(size)
             tina.left(60)
         tina.end_fill()
-    else: # recursive case: arrange smaller hexaflakes in a hexagonal ring
+    else: # recursive case
         for i in range(6):
             hexaflake(size / 3, depth - 1)
             tina.forward(size / 3)            
@@ -29,12 +29,9 @@ tina.penup()
 tina.goto(-100, -200) 
 tina.pendown()
 
-# Set colors (optional, makes the geometry pop)
 tina.color("black", "royalblue")
 
-# Draw the fractal
-hexaflake(350, 4)
+# 2. LOWER DEPTH: Set to depth 2 so you can watch it draw without waiting forever
+hexaflake(350, 2)
 
-# Force the screen to display the fully generated image
-screen.update()
 turtle.exitonclick()
