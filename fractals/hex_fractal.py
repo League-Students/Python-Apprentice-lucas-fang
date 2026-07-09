@@ -5,12 +5,12 @@ screen = turtle.Screen()
 screen.setup(700, 700)
 tina.hideturtle()
 
-# Turn off tracer for instant rendering
+# Instant drawing for crisp rendering
 screen.tracer(0) 
 tina.pensize(1)
 
 def draw_single_hexagon(size):
-    """The absolute smallest unit: exactly one solid hexagon."""
+    """Draws exactly one solid green hexagon with a clean black outline."""
     tina.color("black", "#5CFF42")
     tina.begin_fill()
     for _ in range(6):
@@ -18,30 +18,36 @@ def draw_single_hexagon(size):
         tina.left(60)
     tina.end_fill()
 
-def sierpinski_hexagon(size, depth):
-    # BASE CASE: The smallest hexagons are just one single hexagon
+def crystal_hexagon(size, depth):
+    # BASE CASE: Stop branching when depth hits 0
     if depth == 0:
-        draw_single_hexagon(size)
         return
 
-    # RECURSIVE CASE: Arrange 6 smaller hexagons in a ring
+    # 1. Draw the actual, solid single hexagon for this level
+    draw_single_hexagon(size)
+
+    # 2. RECURSIVE CASE: Go to each of the 6 corners and sprout a smaller hexagon
     for _ in range(6):
-        # Draw the smaller sub-hexagon/cluster at this corner
-        sierpinski_hexagon(size / 3, depth - 1)
-        
-        # Move perfectly along the imaginary parent edge to the next corner
         tina.penup()
-        tina.forward(size * 2 / 3) 
-        tina.left(60)
+        tina.forward(size)  # Move directly to the outer vertex
+        tina.pendown()
+        
+        # Recursively draw a smaller single hexagon branching off this corner
+        # Scaling by 2.5 keeps the branches perfectly separated
+        crystal_hexagon(size / 2.5, depth - 1)
+        
+        tina.penup()
+        tina.backward(size) # Return to the starting vertex
+        tina.left(60)       # Turn to the next corner
         tina.pendown()
 
-# Position the turtle to center the fractal nicely
+# Center the primary base hexagon on the canvas
 tina.penup()
-tina.goto(-150, -220)
+tina.goto(-75, -120)
 tina.pendown()
 
-# Depth 3 or 4 shows the beautiful structure clearly
-sierpinski_hexagon(400, 3)
+# Depth 4 creates a beautiful, solid geometric crystal flake
+crystal_hexagon(150, 4)
 
 screen.update()
 turtle.exitonclick()
