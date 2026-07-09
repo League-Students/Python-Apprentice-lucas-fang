@@ -5,12 +5,12 @@ screen = turtle.Screen()
 screen.setup(700, 700)
 tina.hideturtle()
 
-# Turn off tracer for instant rendering of deep recursive layers
+# Turn off tracer for instant rendering
 screen.tracer(0) 
 tina.pensize(1)
 
 def draw_single_hexagon(size):
-    """Draws exactly one solid green hexagon with a clean black outline."""
+    """The absolute smallest unit: exactly one solid hexagon."""
     tina.color("black", "#5CFF42")
     tina.begin_fill()
     for _ in range(6):
@@ -18,30 +18,30 @@ def draw_single_hexagon(size):
         tina.left(60)
     tina.end_fill()
 
-def corner_hexaflake(size, depth):
-    # BASE CASE: Draw a solid hexagon at the lowest depth
+def sierpinski_hexagon(size, depth):
+    # BASE CASE: The smallest hexagons are just one single hexagon
     if depth == 0:
         draw_single_hexagon(size)
         return
 
-    # RECURSIVE CASE: Place smaller flakes exactly on the 6 outer corners
+    # RECURSIVE CASE: Arrange 6 smaller hexagons in a ring
     for _ in range(6):
-        # Draw the smaller sub-flake at the current vertex
-        corner_hexaflake(size / 3, depth - 1)
+        # Draw the smaller sub-hexagon/cluster at this corner
+        sierpinski_hexagon(size / 3, depth - 1)
         
-        # Move along the perimeter of the parent hexagon to the next corner
+        # Move perfectly along the imaginary parent edge to the next corner
         tina.penup()
         tina.forward(size * 2 / 3) 
         tina.left(60)
         tina.pendown()
 
-# Center the starting point on the screen
+# Position the turtle to center the fractal nicely
 tina.penup()
-tina.goto(-150, -200)
+tina.goto(-150, -220)
 tina.pendown()
 
-# Depth 4 or 5 looks incredible with this specific pattern
-corner_hexaflake(350, 4)
+# Depth 3 or 4 shows the beautiful structure clearly
+sierpinski_hexagon(400, 3)
 
 screen.update()
 turtle.exitonclick()
