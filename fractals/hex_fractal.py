@@ -5,7 +5,7 @@ screen = turtle.Screen()
 screen.setup(700, 700)
 tina.hideturtle()
 
-# Turn off tracer for instant drawing of complex fractals
+# Turn off tracer for instant rendering of deep recursive layers
 screen.tracer(0) 
 tina.pensize(1)
 
@@ -18,38 +18,30 @@ def draw_single_hexagon(size):
         tina.left(60)
     tina.end_fill()
 
-def hexaflake(size, depth):
-    # BASE CASE
+def corner_hexaflake(size, depth):
+    # BASE CASE: Draw a solid hexagon at the lowest depth
     if depth == 0:
         draw_single_hexagon(size)
         return
 
-    # RECURSIVE CASE
-    # 1. Draw the central sub-flake
-    hexaflake(size / 3, depth - 1)
-    
-    # 2. Draw the 6 surrounding sub-flakes
+    # RECURSIVE CASE: Place smaller flakes exactly on the 6 outer corners
     for _ in range(6):
-        tina.penup()
-        tina.forward(size * 2 / 3)
-        tina.pendown()
+        # Draw the smaller sub-flake at the current vertex
+        corner_hexaflake(size / 3, depth - 1)
         
-        # Recursively call the next depth
-        hexaflake(size / 3, depth - 1)
-        
-        # Return to center and turn to the next position
+        # Move along the perimeter of the parent hexagon to the next corner
         tina.penup()
-        tina.backward(size * 2 / 3)
+        tina.forward(size * 2 / 3) 
         tina.left(60)
         tina.pendown()
 
-# Center the setup nicely on the canvas
+# Center the starting point on the screen
 tina.penup()
-tina.goto(-100, -150)
+tina.goto(-150, -200)
 tina.pendown()
 
-# Depth 3 or 4 will show a beautiful, intricate fractal structure
-hexaflake(300, 3)
+# Depth 4 or 5 looks incredible with this specific pattern
+corner_hexaflake(350, 4)
 
 screen.update()
 turtle.exitonclick()
