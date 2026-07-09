@@ -9,33 +9,30 @@ tina.hideturtle()
 screen.tracer(1)
 tina.speed('fastest')
 
-# Exact matching vibrant green color
-HEX_GREEN = "#5CFF42"
+def draw_single_hexagon(size):
+    """Draws exactly one solid green hexagon with a black border."""
+    tina.color("black", "#5CFF42")
+    tina.begin_fill()
+    for _ in range(6):
+        tina.forward(size)
+        tina.left(60)
+    tina.end_fill()
 
-def hexaflake_clean(size, depth):
+def hexaflake_direct(size, depth):
     if depth == 0:
-        # Base case: draw a solid green hexagon with NO black outline lines
-        tina.color(HEX_GREEN, HEX_GREEN)  
-        tina.begin_fill()
-        for _ in range(6):
-            tina.forward(size)
-            tina.left(60)
-        tina.end_fill()
-        
-        # Optional: Add a black edge only to the outer border of this hexagon
-        tina.color("black", HEX_GREEN)
-        for _ in range(6):
-            tina.forward(size)
-            tina.left(60)
+        # Base case: Just draw ONE hexagon instead of a cluster of 6
+        draw_single_hexagon(size)
     else:
-        # Recursive case
+        # Recursive case: Position 6 sub-flakes around a ring
         for _ in range(6):
-            hexaflake_clean(size / 3, depth - 1)
+            # Pass the scaled-down size down the chain
+            hexaflake_direct(size / 3, depth - 1)
             
-            # Move along the geometric outline with pen hidden to avoid stray cross-lines
-            tina.color(HEX_GREEN) 
+            # Move cleanly along the outer perimeter to the next node position
+            tina.penup()
             tina.forward(size * 2 / 3)
             tina.left(60)
+            tina.pendown()
 
 # Center the drawing on screen
 tina.penup()
@@ -43,8 +40,8 @@ tina.goto(-100, -150)
 tina.pendown()
 tina.pensize(2)
 
-# Draw the clean depth 2 pattern line-by-line
-hexaflake_clean(300, 2)
+# Draw the exact image structure cleanly at depth 2
+# (At depth 1, this will draw exactly 6 individual hexagons in a ring)
+hexaflake_direct(300, 2)
 
 turtle.exitonclick()
-
