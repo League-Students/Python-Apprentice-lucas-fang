@@ -2,12 +2,12 @@ import turtle
 
 tina = turtle.Turtle()
 screen = turtle.Screen()
-screen.setup(600, 600)
+screen.setup(700, 700)
 tina.hideturtle()
 
-# Keep it drawing line-by-line visually
-screen.tracer(1)
-tina.speed('fastest')
+# Turn off tracer for instant drawing of complex fractals
+screen.tracer(0) 
+tina.pensize(1)
 
 def draw_single_hexagon(size):
     """Draws exactly one solid green hexagon with a clean black outline."""
@@ -19,28 +19,37 @@ def draw_single_hexagon(size):
     tina.end_fill()
 
 def hexaflake(size, depth):
-    # BASE CASE: Stop everything immediately and draw ONE solitary hexagon
+    # BASE CASE
     if depth == 0:
         draw_single_hexagon(size)
-        return  # This prevents the loop below from ever running at depth 0
-        
-    # RECURSIVE CASE: Only position the sub-clusters if we haven't hit the base depth
+        return
+
+    # RECURSIVE CASE
+    # 1. Draw the central sub-flake
+    hexaflake(size / 3, depth - 1)
+    
+    # 2. Draw the 6 surrounding sub-flakes
     for _ in range(6):
-        hexaflake(size / 3, depth - 1)
-        
-        # Move cleanly around the outer perimeter to the next node position
         tina.penup()
         tina.forward(size * 2 / 3)
+        tina.pendown()
+        
+        # Recursively call the next depth
+        hexaflake(size / 3, depth - 1)
+        
+        # Return to center and turn to the next position
+        tina.penup()
+        tina.backward(size * 2 / 3)
         tina.left(60)
         tina.pendown()
 
 # Center the setup nicely on the canvas
 tina.penup()
-tina.goto(-150, -200) 
+tina.goto(-100, -150)
 tina.pendown()
-tina.pensize(2)
 
-# Run at depth 1 to see the perfect solid ring structure
-hexaflake(350, 1)
+# Depth 3 or 4 will show a beautiful, intricate fractal structure
+hexaflake(300, 3)
 
+screen.update()
 turtle.exitonclick()
