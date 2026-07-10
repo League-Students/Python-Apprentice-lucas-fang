@@ -22,4 +22,4 @@ screen.onkey(opencam1, "1")
 screen.onkey(opencam2, "2")
 screen.onkey(opencam2, "2")
 
-turtle.
+turtle.exitonclick()
