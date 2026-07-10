@@ -45,5 +45,5 @@ tina.goto(-300, -300)
 tina.pendown()
 
 # Set depth to 3 for fast rendering. Increase to 4 if you want higher detail!
-fractal_square(400, 4) 
+fractal_square(600, 4) 
 turtle.exitonclick()
