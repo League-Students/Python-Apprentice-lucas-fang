@@ -3,7 +3,8 @@ import turtle
 tina = turtle.Turtle()
 screen = turtle.Screen()
 screen.setup(500 , 500)
-tina
+tina.shape("turtle")
+tina.set_size()
 camcolors = ["red", "black", "white","green","blue"]
 
 def opencam1():
