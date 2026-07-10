@@ -12,6 +12,8 @@ tinaprogress = 0
 
 camcolors = ["red", "black", "white","green","blue"]
 
+def movetina():
+    
 def showanimes(cam_num):
     if(cam_num == tinapath[tinaprogress]):
         tina.showturtle()
