@@ -1,45 +1,34 @@
 import turtle
-import math
 
 tina = turtle.Turtle()
 screen = turtle.Screen()
-screen.setup(600, 600)
+screen.setup(700, 700)
 tina.hideturtle()
 tina.speed('fastest')
 
-def sierpinski_hexagon(size, depth):
-    if depth == 0:  # base case
+def fractal_hexagon(size, depth):
+    # Base case: When depth reaches 0, stop recursing and 
+    # draw exactly ONE single filled hexagon.
+    if depth == 0:  
         tina.begin_fill()
         for i in range(6):
             tina.forward(size)
             tina.left(60)
         tina.end_fill()
-    else:  # recursive case
-        start_x, start_y = tina.position()
-        start_heading = tina.heading()
-
-        corners = []
+    else:  
+        # Recursive case: Ring of 6 positions. 
+        # Each position will either break down further or draw a single hexagon.
         for i in range(6):
-            angle = math.radians(start_heading + 60 * i)
-            cx = start_x + size * math.cos(angle)
-            cy = start_y + size * math.sin(angle)
-            corners.append((cx, cy, start_heading + 60 * i + 30))
+            fractal_hexagon(size / 3, depth - 1)
+            tina.forward(size * 2 / 3)
+            tina.left(60)
 
-        tina.goto(corners[0][0], corners[0][1])
-        for i in range(6):
-            cx, cy, heading = corners[i]
-            tina.setheading(heading)
-            sierpinski_hexagon(size / 3, depth - 1)
-            next_i = (i + 1) % 6
-            nx, ny, _ = corners[next_i]
-            tina.setheading(tina.towards(nx, ny))
-            tina.goto(nx, ny)
-
-        tina.goto(start_x, start_y)
-        tina.setheading(start_heading)
-
+# Position the turtle to center the final shape
 tina.penup()
-tina.goto(0, -150)
+tina.goto(-150, -220)
 tina.pendown()
-sierpinski_hexagon(100, 3)
+
+# Running with Depth 2 or 3 ensures the final tiny elements are single solid blocks
+fractal_hexagon(450, 3)
+
 turtle.exitonclick()
