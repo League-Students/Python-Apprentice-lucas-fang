@@ -5,7 +5,7 @@ screen = turtle.Screen()
 screen.setup(500 , 500)
 tina.shape("turtle")
 tina_path = [1, 2, 3, 4, 5]
-tinapr
+tinaprogress = 0
 camcolors = ["red", "black", "white","green","blue"]
 
 def opencam1():
