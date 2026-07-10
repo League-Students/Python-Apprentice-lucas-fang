@@ -82,7 +82,7 @@ screen.onkey(opencam3, "3")
 screen.onkey(opencam4, "4")
 screen.onkey(opencam5, "5")
 screen.onkey(exitcam, "0")
-screen.onkey(scaretina, "")
+screen.onkey(scaretina, "space")
 screen.ontimer(movetina, 2000)
 
 turtle.exitonclick()
