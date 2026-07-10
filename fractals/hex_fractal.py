@@ -17,7 +17,7 @@ def sierpinski_hexagon(size, depth):
         start_x, start_y = tina.position()
         start_heading = tina.heading()
         for i in range(6):
-            tina.penup()
+#            tina.penup()
             tina.setheading(start_heading + 60 * i)
             tina.forward(size)
             tina.setheading(start_heading + 60 * i + 30)
@@ -26,7 +26,7 @@ def sierpinski_hexagon(size, depth):
 #            tina.penup()
             tina.goto(start_x, start_y)
             tina.setheading(start_heading)
-            tina.pendown()
+#            tina.pendown()
 
 tina.penup()
 tina.goto(0, -150)
