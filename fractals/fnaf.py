@@ -7,4 +7,9 @@ screen.setup(500 , 500)
 
 camcolors = ["red", "black", "white","green","blue"]
 
+def opencam1():
+    print("cam 1 open")
+
+
+screen.
 tina.exitonclick()
