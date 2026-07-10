@@ -23,7 +23,9 @@ def movetina():
 def scaretina():
     global tinaprogress
     global camnum 
-    if tinaprogress == len()
+    if tinaprogress == len(tinapath) and camnum == 0:
+        tinaprogress = 0
+        print()
 def showanimes():
     global camnum
     if(camnum == tinapath[tinaprogress]):
