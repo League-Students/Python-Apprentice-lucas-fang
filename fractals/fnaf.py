@@ -2,11 +2,14 @@ import turtle
 import time
 
 tina = turtle.Turtle()
+
 screen = turtle.Screen()
 screen.setup(500 , 500)
+
 tina.shape("turtle")
 tinapath = [1, 2, 3, 4, 5]
 tinaprogress = 0
+
 camcolors = ["red", "black", "white","green","blue"]
 
 def showanimes(cam_num):
@@ -55,4 +58,5 @@ screen.onkey(opencam4, "4")
 screen.onkey(opencam5, "5")
 screen.onkey(exitcam, "0")
 
+while True
 turtle.exitonclick()
