@@ -34,7 +34,7 @@ def opencam1():
 
 def opencam2():
     global camnum
-    camnum = 1
+    camnum = 2
     print("cam 2 open")
     screen.bgcolor(camcolors[1])
     showanimes(2)
