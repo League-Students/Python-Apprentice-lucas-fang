@@ -26,26 +26,36 @@ def showanimes():
         tina.hideturtle()
 
 def opencam1():
+    global camnum
+    camnum = 1
     print("cam 1 open")
     screen.bgcolor(camcolors[0])
     showanimes(1)
 
 def opencam2():
+    global camnum
+    camnum = 1
     print("cam 2 open")
     screen.bgcolor(camcolors[1])
     showanimes(2)
 
 def opencam3():
+    global camnum
+    camnum = 3
     print("cam 3 open")
     screen.bgcolor(camcolors[2])
     showanimes(3)
 
 def opencam4():
+    global camnum
+    camnum = 4
     print("cam 4 open")
     screen.bgcolor(camcolors[3])
     showanimes(4)
 
 def opencam5():
+    global camnum
+    camnum = 5
     print("cam 5 open")
     screen.bgcolor(camcolors[4])
     showanimes(5)
