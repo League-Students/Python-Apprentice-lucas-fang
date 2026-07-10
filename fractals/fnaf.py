@@ -1,5 +1,4 @@
 import turtle
-import random
 
 tina = turtle.Turtle()
 screen = turtle.Screen()
@@ -12,7 +11,7 @@ def opencam1():
     screen.bg(camcolors[0])
 def opencam2():
     print("cam 2 open")
-    screen.bg(camcolors[2])
+    screen.bg(camcolors[1])
 
 
 screen.listen()
