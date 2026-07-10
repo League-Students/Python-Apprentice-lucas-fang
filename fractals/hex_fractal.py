@@ -19,7 +19,7 @@ def sierpinski_hexagon(size, depth):
         for i in range(6):
             tina.penup()
             tina.setheading(start_heading + 60 * i)
-            tina.forward(size * 2 / 3)
+            tina.forward(size)
             tina.pendown()
             sierpinski_hexagon(size / 3, depth - 1)
             tina.penup()
@@ -30,5 +30,5 @@ def sierpinski_hexagon(size, depth):
 tina.penup()
 tina.goto(0, -0)
 tina.pendown()
-sierpinski_hexagon(250, 3)
+sierpinski_hexagon(300, 3)
 turtle.exitonclick()
