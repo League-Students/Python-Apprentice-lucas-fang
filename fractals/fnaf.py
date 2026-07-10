@@ -17,7 +17,6 @@ def movetina():
     tinaprogress += 1
     
     screen.ontimer(movetina,2000)
-    
 
 def showanimes(cam_num):
     if(cam_num == tinapath[tinaprogress]):
