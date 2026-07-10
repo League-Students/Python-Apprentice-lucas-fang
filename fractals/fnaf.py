@@ -17,6 +17,5 @@ def opencam2():
 
 screen.listen()
 screen.onkey(opencam1, "1")
-screen.onkey(opencam1, "1")
-
+screen.onkey(opencam2, "2")
 turtle.exitonclick()
