@@ -25,7 +25,7 @@ def scaretina():
     global camnum 
     if tinaprogress == len(tinapath) and camnum == 0:
         tinaprogress = 0
-        print()
+        print("AaaaAaAaaAAa")
 def showanimes():
     global camnum
     if(camnum == tinapath[tinaprogress]):
@@ -82,7 +82,7 @@ screen.onkey(opencam3, "3")
 screen.onkey(opencam4, "4")
 screen.onkey(opencam5, "5")
 screen.onkey(exitcam, "0")
-
+screen.onkey(scaretina, "")
 screen.ontimer(movetina, 2000)
 
 turtle.exitonclick()
