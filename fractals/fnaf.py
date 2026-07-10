@@ -15,6 +15,8 @@ camcolors = ["red", "black", "white","green","blue"]
 def movetina():
     global tinaprogress
     tinaprogress += 1
+    if tinaprogress == len(tina_path):
+        print("game over :((((")
     showanimes()
     screen.ontimer(movetina,2000)
 
