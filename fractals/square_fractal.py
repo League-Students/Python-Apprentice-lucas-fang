@@ -2,28 +2,31 @@ import turtle
 
 tina = turtle.Turtle()
 screen = turtle.Screen()
-screen.setup(600,600)
+screen.setup(700, 700)
 tina.hideturtle()
 tina.speed('fastest')
-# Tell python to work with turtles, make tina, set screen size, hide tina, set tinas speed. 
-def fractal_square(size, depth):
-    if depth == 0: # base case
-        tina.begin_fill()
-        for i in range(4):
-            tina.forward(size)
-            tina.left(90)
-        tina.end_fill()
-    else: #recursive case
-        for i in range(4):
-            fractal_square(size / 3, depth - 1)
-            tina.forward(size / 3)            
-            fractal_square(size / 3, depth - 1)
-            tina.forward(size * 2 / 3)
-            tina.left(90)
 
-#move tina to a good spot
+def fractal_hexagon(size, depth):
+    if depth == 0:  # Base case: draw a solid hexagon
+        tina.begin_fill()
+        for i in range(6):
+            tina.forward(size)
+            tina.left(60)
+        tina.end_fill()
+    else:  # Recursive case: place smaller hexagons along the perimeter
+        for i in range(6):
+            fractal_hexagon(size / 3, depth - 1)
+            tina.forward(size / 3)
+            fractal_hexagon(size / 3, depth - 1)
+            tina.forward(size * 2 / 3)
+            tina.left(60)
+
+# Move tina to a centered starting spot
 tina.penup()
-tina.goto(-300 , -250)
+tina.goto(-100, -200)
 tina.pendown()
-fractal_square(400, 4)
+
+# Run the fractal (size 350, depth 3 looks best without lagging)
+fractal_hexagon(350, 3)
+
 turtle.exitonclick()
