@@ -21,7 +21,7 @@ def fractal_hexagon(size, depth):
 
 # Move tina to a good starting spot to center the drawing
 tina.penup()
-tina.goto(-150, -220)
+tina.goto(-150, -250)
 tina.pendown()
 
 # Run the fractal (Size 450, Depth 3 looks great line-by-line)
