@@ -20,6 +20,9 @@ def movetina():
     showanimes()
     screen.ontimer(movetina,2000)
 
+def scaretina():
+    global tinaprogress
+    
 def showanimes():
     global camnum
     if(camnum == tinapath[tinaprogress]):
