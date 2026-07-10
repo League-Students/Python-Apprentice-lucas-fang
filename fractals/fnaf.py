@@ -59,6 +59,6 @@ screen.onkey(opencam5, "5")
 screen.onkey(exitcam, "0")
 
 while True:
-    tina.sleeo(1)
-    pinaprogress +=1
+    tina.sleep(1)
+    tinaprogress +=1
 turtle.exitonclick()
