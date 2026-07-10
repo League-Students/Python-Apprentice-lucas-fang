@@ -58,6 +58,6 @@ screen.onkey(opencam4, "4")
 screen.onkey(opencam5, "5")
 screen.onkey(exitcam, "0")
 
-screen
+screen.ontimer(movetina, 1000)
 
 turtle.exitonclick()
