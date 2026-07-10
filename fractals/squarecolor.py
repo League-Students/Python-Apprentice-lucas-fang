@@ -21,7 +21,7 @@ def fractal_square(size, depth):
         g = max(0, min(255, int((y / 600) * 255)))
         
         # Calculate Blue using a mix of X and Y for a smooth diagonal gradient
-        b = max(0, min(255, int(((x + y) / 1200) * 255)))
+        b = 150 #max(0, min(255, int(((x + y) / 1200) * 255)))
         
         # Set BOTH the edge/pen color and the fill color to match
         tina.color(r, g, b)
@@ -41,7 +41,7 @@ def fractal_square(size, depth):
 
 # Move tina to a good spot to center the 400px fractal on a 600x600 screen
 tina.penup()
-tina.goto(-200, -200) 
+tina.goto(-300, -300) 
 tina.pendown()
 
 # Set depth to 3 for fast rendering. Increase to 4 if you want higher detail!
