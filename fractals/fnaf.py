@@ -3,7 +3,7 @@ import turtle
 tina = turtle.Turtle()
 screen = turtle.Screen()
 screen.setup(500 , 500)
-
+tina
 camcolors = ["red", "black", "white","green","blue"]
 
 def opencam1():
@@ -31,6 +31,6 @@ screen.onkey(opencam2, "2")
 screen.onkey(opencam3, "3")
 screen.onkey(opencam4, "4")
 screen.onkey(opencam5, "5")
-screen.onkey(, "5")
+screen.onkey(exitcam, "0")
 
 turtle.exitonclick()
