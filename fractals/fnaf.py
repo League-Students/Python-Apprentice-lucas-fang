@@ -9,8 +9,9 @@ camcolors = ["red", "black", "white","green","blue"]
 
 def opencam1():
     print("cam 1 open")
+    screen.bg(camcolors[0])
 
 
 screen.listen()
 screen.onkey(opencam1, "1")
-tina.exitonclick()
+turtle.exitonclick()
