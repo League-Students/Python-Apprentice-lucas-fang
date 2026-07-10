@@ -32,10 +32,12 @@ def opencam3():
 def opencam4():
     print("cam 4 open")
     screen.bgcolor(camcolors[3])
+    showanimes(4)
 
 def opencam5():
     print("cam 5 open")
     screen.bgcolor(camcolors[4])
+    showanimes(5)
 
 def exitcam():
     print("cam exited")
