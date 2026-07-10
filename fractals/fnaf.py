@@ -9,7 +9,7 @@ tinaprogress = 0
 camcolors = ["red", "black", "white","green","blue"]
 
 def showanimes(cam_num):
-    if()
+    if(cam_num == tinapath[tina])
 
 def opencam1():
     print("cam 1 open")
