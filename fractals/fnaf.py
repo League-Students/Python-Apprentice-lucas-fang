@@ -9,16 +9,17 @@ screen.setup(500 , 500)
 tina.shape("turtle")
 tinapath = [1, 2, 3, 4, 5]
 tinaprogress = 0
-
+camnum = 0
 camcolors = ["red", "black", "white","green","blue"]
 
 def movetina():
     global tinaprogress
     tinaprogress += 1
-    
+    show
     screen.ontimer(movetina,2000)
 
-def showanimes(cam_num):
+def showanimes():
+    global
     if(cam_num == tinapath[tinaprogress]):
         tina.showturtle()
     else:
