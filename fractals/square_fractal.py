@@ -4,29 +4,31 @@ tina = turtle.Turtle()
 screen = turtle.Screen()
 screen.setup(700, 700)
 tina.hideturtle()
-
-# 'fastest' is highly recommended so you don't have to wait too long!
 tina.speed('fastest')
 
 def fractal_hexagon(size, depth):
-    if depth == 0:  # Base case: draw and fill each individual hexagon line-by-line
+    # Base case: When depth reaches 0, stop recursing and 
+    # draw exactly ONE single filled hexagon.
+    if depth == 0:  
         tina.begin_fill()
         for i in range(6):
             tina.forward(size)
             tina.left(60)
         tina.end_fill()
-    else:  # Recursive case: follow the perimeter path to place the sub-hexagons
+    else:  
+        # Recursive case: Ring of 6 positions. 
+        # Each position will either break down further or draw a single hexagon.
         for i in range(6):
             fractal_hexagon(size / 3, depth - 1)
             tina.forward(size * 2 / 3)
             tina.left(60)
 
-# Move tina to a good starting spot to center the drawing
+# Position the turtle to center the final shape
 tina.penup()
 tina.goto(-150, -220)
 tina.pendown()
 
-# Run the fractal (Size 450, Depth 3)
+# Running with Depth 2 or 3 ensures the final tiny elements are single solid blocks
 fractal_hexagon(450, 3)
 
 turtle.exitonclick()
