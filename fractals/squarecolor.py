@@ -41,9 +41,9 @@ def fractal_square(size, depth):
 
 # Move tina to a good spot to center the 400px fractal on a 600x600 screen
 tina.penup()
-tina.goto(-300, -300) 
+tina.goto(-250, -250) 
 tina.pendown()
 
 # Set depth to 3 for fast rendering. Increase to 4 if you want higher detail!
-fractal_square(600, 4) 
+fractal_square(500, 4) 
 turtle.exitonclick()
