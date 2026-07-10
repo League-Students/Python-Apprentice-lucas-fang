@@ -42,5 +42,5 @@ tina.penup()
 tina.goto(-200, -200) # Slightly adjusted to center a 400px shape on a 600x600 screen
 tina.pendown()
 
-fractal_square(400, 3) # Lowered depth to 3 so it runs much faster, change to 4 if desired
+fractal_square(400, 4) # Lowered depth to 3 so it runs much faster, change to 4 if desired
 turtle.exitonclick()
