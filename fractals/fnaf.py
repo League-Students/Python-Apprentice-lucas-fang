@@ -11,5 +11,6 @@ def opencam1():
     print("cam 1 open")
 
 
+screen.listen()
 screen.
 tina.exitonclick()
