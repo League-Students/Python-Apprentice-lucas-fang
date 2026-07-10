@@ -30,5 +30,5 @@ def sierpinski_hexagon(size, depth):
 tina.penup()
 tina.goto(0, -0)
 tina.pendown()
-sierpinski_hexagon(300, 3)
+sierpinski_hexagon(250, 3)
 turtle.exitonclick()
