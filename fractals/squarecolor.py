@@ -5,7 +5,7 @@ screen = turtle.Screen()
 screen.setup(600, 600)
 tina.hideturtle()
 tina.speed('fastest')
-tina.setsize()
+
 # Enable RGB color mode up to 255
 screen.colormode(255)
 
