@@ -7,28 +7,26 @@ tina.hideturtle()
 tina.speed('fastest')
 
 def fractal_hexagon(size, depth):
-    # Base case: When depth reaches 0, stop recursing and 
-    # draw exactly ONE single filled hexagon.
-    if depth == 0:  
+    if depth == 0:  # Base case: draw a solid hexagon
         tina.begin_fill()
         for i in range(6):
             tina.forward(size)
             tina.left(60)
         tina.end_fill()
-    else:  
-        # Recursive case: Ring of 6 positions. 
-        # Each position will either break down further or draw a single hexagon.
+    else:  # Recursive case: place smaller hexagons along the perimeter
         for i in range(6):
+            fractal_hexagon(size / 3, depth - 1)
+            tina.forward(size / 3)
             fractal_hexagon(size / 3, depth - 1)
             tina.forward(size * 2 / 3)
             tina.left(60)
 
-# Position the turtle to center the final shape
+# Move tina to a centered starting spot
 tina.penup()
-tina.goto(-150, -220)
+tina.goto(-100, -200)
 tina.pendown()
 
-# Running with Depth 2 or 3 ensures the final tiny elements are single solid blocks
-fractal_hexagon(450, 3)
+# Run the fractal (size 350, depth 3 looks best without lagging)
+fractal_hexagon(350, 3)
 
 turtle.exitonclick()
